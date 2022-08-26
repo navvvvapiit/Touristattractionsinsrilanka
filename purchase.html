@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Purchase</title>
+        <link rel="stylesheet" href="purchase.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.webp">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.webp">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="mask-icon" href="images/safari-pinned-tab.webp" color="#5bbad5">
+        <link rel="shortcut icon" href="images/favicon.webp">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="images/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+    </head>
+    <body> 
+        
+        <br>
+
+        <h3>Book Your Tickets Here...</h3>   
+
+        <section id="wrapper">
+            <div id="hdiv3">
+                <form action="get" id="form">
+                    <label for="acdrop">Select activity:</label>
+                    <select name="acdrop" id="acdrop" required>
+                        <option value="Mega Zipline">Mega Zipline</option>
+                        <option value="Surfing Wave">Surfing Wave</option>
+                        <option value="Carting">Carting</option>
+                    </select><br><br>
+                    
+                    <label for="ticket">Choice of ticket *:</label>
+                    <select id="ticket" required>
+                        <option value="Local-Child">Local Pass- Child (3 to 12 years)</option>
+                        <option value="Foregin-Child">Foreigner Pass- Child (3 to 12 years)</option>
+                        <option value="Local-Adult">Local Passs- Adult</option>
+                        <option value="Foregin-Adult">Foreigner Pass- Adult</option>
+                        <option value="Annual-Foreign">Annual Pass- Foreign</option>
+                        <option value="Annual-Local">Annual Pass- Local </option>
+                    </select><br><br>
+                    <label for="time">Duration: </label>
+                    <select name="duration" id="time" required>
+                        <option value="3 hours">3 Hrs</option>
+                        <option value="12 hours">1&frasl;2 day</option>
+                        <option value="24 hours">Full Day</option>
+                        <option value="48 hours">2 Days</option>
+                    </select><br><br>
+                    
+                    <label for="number-of-tick">Number of tickets: </label>
+                    <input type="number" id="number-of-tick" min="0"><br><br>
+
+                    <!-- <label for="extrats">Extras </label><br> -->
+                    <label for="food_token">Number of food tokens: </label>
+                    <input type="number" id="food_token" min="0">
+                    <label style="font-size: 15px;">(optional)</label><br><br><br>
+                    <p id="notice"><b>*Children under 3 entrance is free</b></p>
+                    <button type="submit" id="submit"><span class="material-symbols-outlined">
+                        add_shopping_cart
+                        </span>
+                    </button>
+                    <button id="fav_add"><span class="material-symbols-outlined">
+                        favorite
+                        </span>
+                    </button>
+                    <button id="show_cart"><span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                    </button><br><br><hr>
+                    <p id="temp"></p>
+                </form>
+            </div>
+            <div class="cart" id="cart">
+                <div class="image"><img src="images/shopping_cart.svg" alt="shopping cart"></div>
+                <h1>Cart</h1>
+                <div id="no_cart">
+                    <p id="nocarttext" style="display: block; margin:auto;">
+                        No items in Cart
+                    </p>
+                </div>
+                <table id="out">
+                </table>
+                <table id="tot_table">
+                    <th><hr><b><i>Total</i></b></th>
+                    <th><hr><i id="total">Rs.0/=</i></th>
+                </table>
+                <button id="close"><span class="material-symbols-outlined">
+                    close
+                    </span>
+                </button>
+                <button id="remove"><span class="material-symbols-outlined">
+                    remove_shopping_cart
+                    </span>Clear Cart
+                </button>
+                <button id="checkout"><span class="material-symbols-outlined">
+                    shopping_cart_checkout
+                    </span>Check Out
+                </button>
+                <button id="loyal"><span class="material-symbols-outlined">
+                    card_membership
+                    </span>Check Loyalty Points
+                </button>
+                <button id="order_fav"><span class="material-symbols-outlined">
+                    heart_plus
+                    </span>Order Favourit
+                </button>
+            </div>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
